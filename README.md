@@ -88,7 +88,8 @@ _The **APB** MVP will be to give users a full CRUD experience and build a full s
 
 
 
-[Component Tree Sample](https://gist.git.generalassemb.ly/davidtwhitlatch/414107e2560ae0bb65e233570f2fe056#file-component-tree-png)
+[Component Tree Sample] <img width="1185" alt="Screen Shot 2021-10-03 at 11 24 53 PM" src="https://user-images.githubusercontent.com/56912648/135859258-98cf55ab-f3e2-489c-8f97-b432fef10934.png">
+
 
 #### Component Architecture
 
@@ -147,6 +148,28 @@ src
 | Task                | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------- | :------: | :------------: | :-----------: | :---------: |
 | Add Contact Form    |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
+| Create CRUD Actions |    H     |     3 hrs      |     1 hrs     |     TBD     |
+| Create CRUD Actions |    H     |     3 hrs      |     1 hrs     |     TBD     |
+| Create CRUD Actions |    H     |     3 hrs      |     1 hrs     |     TBD     |
+| Create CRUD Actions |    H     |     3 hrs      |     1 hrs     |     TBD     |
+| Create CRUD Actions |    H     |     3 hrs      |     1 hrs     |     TBD     |
+| Create CRUD Actions |    H     |     3 hrs      |     1 hrs     |     TBD     |
+| Create CRUD Actions |    H     |     3 hrs      |     1 hrs     |     TBD     |
+| Create CRUD Actions |    H     |     3 hrs      |     1 hrs     |     TBD     |
+| Create CRUD Actions |    H     |     3 hrs      |     1 hrs     |     TBD     |
+| Create CRUD Actions |    H     |     3 hrs      |     1 hrs     |     TBD     |
+| Create CRUD Actions |    H     |     3 hrs      |     1 hrs     |     TBD     |
+| Create CRUD Actions |    H     |     3 hrs      |     1 hrs     |     TBD     |
+| Create CRUD Actions |    H     |     3 hrs      |     1 hrs     |     TBD     |
+| Create CRUD Actions |    H     |     3 hrs      |     1 hrs     |     TBD     |
+| Create CRUD Actions |    H     |     3 hrs      |     1 hrs     |     TBD     |
+| Create CRUD Actions |    H     |     3 hrs      |     1 hrs     |     TBD     |
+| Create CRUD Actions |    H     |     3 hrs      |     1 hrs     |     TBD     |
+| Create CRUD Actions |    H     |     3 hrs      |     1 hrs     |     TBD     |
+| Create CRUD Actions |    H     |     3 hrs      |     1 hrs     |     TBD     |
+| Create CRUD Actions |    H     |     3 hrs      |     1 hrs     |     TBD     |
+| Create CRUD Actions |    H     |     3 hrs      |     1 hrs     |     TBD     |
+| Create CRUD Actions |    H     |     3 hrs      |     1 hrs     |     TBD     |
 | Create CRUD Actions |    H     |     3 hrs      |     1 hrs     |     TBD     |
 | TOTAL               |          |     6 hrs      |     3 hrs     |     TBD     |
 
