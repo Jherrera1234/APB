@@ -86,12 +86,12 @@ _The **APB** MVP will be to give users a full CRUD experience and build a full s
 
 <img width="581" alt="Screen Shot 2021-10-04 at 8 49 46 AM" src="https://user-images.githubusercontent.com/56912648/135865636-256fbf2d-e2da-4a07-b574-01c49b7a0028.png">
 
--Add parts 
+- Edit
 
 <img width="581" alt="Screen Shot 2021-10-04 at 8 49 53 AM" src="https://user-images.githubusercontent.com/56912648/135865707-12c96e3f-6892-4a56-a628-156c377e346a.png">
 
 
-- Edit
+- Add parts
 
 <img width="583" alt="Screen Shot 2021-10-04 at 8 50 03 AM" src="https://user-images.githubusercontent.com/56912648/135865731-2a6c0228-a974-43bd-95ea-43eccb1fc58d.png">
 
