@@ -60,36 +60,39 @@ _The **APB** MVP will be to give users a full CRUD experience and build a full s
 #### Wireframes
 
 
-
+- User Login
 <img width="583" alt="Screen Shot 2021-10-04 at 8 48 56 AM" src="https://user-images.githubusercontent.com/56912648/135864882-772a5792-512f-4fda-97ef-bf6ab2e8db6c.png">
 
-- Desktop Landing
+- User Register
 
 <img width="604" alt="Screen Shot 2021-10-04 at 8 49 01 AM" src="https://user-images.githubusercontent.com/56912648/135865399-0ab00ab1-2e68-4e22-9f82-810b44c7d659.png">
 
-- Desktop Hero
+- Garage
 
 !<img width="702" alt="Screen Shot 2021-10-04 at 8 49 18 AM" src="https://user-images.githubusercontent.com/56912648/135865496-45b360a8-12a9-49db-9c50-b51000d1a5db.png">
 
 
-- Resource Index
+- Add Car
 
 <img width="702" alt="Screen Shot 2021-10-04 at 8 49 27 AM" src="https://user-images.githubusercontent.com/56912648/135865566-ca8a898b-b1af-4290-af4c-5191645b50f6.png">
 
 
-- Resource Show
+- AfterMarket Parts
 
 <img width="577" alt="Screen Shot 2021-10-04 at 8 49 38 AM" src="https://user-images.githubusercontent.com/56912648/135865613-9f2ae988-d9bf-4cba-88cc-8dfe6b252d9a.png">
 
 
-- Tablet Resource Index
+- Parts
+
 <img width="581" alt="Screen Shot 2021-10-04 at 8 49 46 AM" src="https://user-images.githubusercontent.com/56912648/135865636-256fbf2d-e2da-4a07-b574-01c49b7a0028.png">
 
 -Add parts 
+
 <img width="581" alt="Screen Shot 2021-10-04 at 8 49 53 AM" src="https://user-images.githubusercontent.com/56912648/135865707-12c96e3f-6892-4a56-a628-156c377e346a.png">
 
 
-- Mobile Resource Index
+- Edit
+
 <img width="583" alt="Screen Shot 2021-10-04 at 8 50 03 AM" src="https://user-images.githubusercontent.com/56912648/135865731-2a6c0228-a974-43bd-95ea-43eccb1fc58d.png">
 
 
