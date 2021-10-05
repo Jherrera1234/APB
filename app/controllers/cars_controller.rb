@@ -1,6 +1,6 @@
 class CarsController < ApplicationController
   before_action :set_car, only: [:show, :update, :destroy]
-
+  before_action :authorize_request, only: [:create, :update, :destroy]
   # GET /cars
   def index
     @cars = Car.all
@@ -10,15 +10,15 @@ class CarsController < ApplicationController
 
   # GET /cars/1
   def show
-    render json: @car
+    render json: @car, includes: :categories
   end
 
   # POST /cars
   def create
     @car = Car.new(car_params)
-
+    @car.user = @current_user
     if @car.save
-      render json: @car, status: :created, location: @car
+      render json: @car, status: :created
     else
       render json: @car.errors, status: :unprocessable_entity
     end
