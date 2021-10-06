@@ -16,7 +16,7 @@ class PartsController < ApplicationController
   # POST /parts
   def create
     @part = Part.new(part_params)
-    @part.user = @current_user
+    # @user = @current_user
 
     if @part.save
       render json: @part, status: :created
@@ -47,6 +47,6 @@ class PartsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def part_params
-      params.require(:part).permit(:make, :model, :img_url, :year)
+      params.require(:part).permit(:name, :price, :description, :img_url, :rating, :category_id, :car_id)
     end
 end

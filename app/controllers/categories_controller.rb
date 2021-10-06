@@ -7,6 +7,7 @@ class CategoriesController < ApplicationController
 
   # GET /categories/1
   def show
+    @category= Category.find(params[:id])
     render json: @category, includes: :parts
   end
 
