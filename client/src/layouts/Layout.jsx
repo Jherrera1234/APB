@@ -6,8 +6,14 @@ export default function Layout(props) {
     <div>
       <header>
         <h1>APB</h1>
-        <Link to="/login">Login/Register</Link>
-        <hr />
+        {props.currentUser ? (
+          <div>
+            <p>{props.currentUser.username}</p>
+            <button onClick={props.handleLogout}>Logout</button>
+          </div>
+        ) : (
+          <Link to='/login'>Login/Register</Link>
+        )}
       </header>
       {props.children}
     </div>
