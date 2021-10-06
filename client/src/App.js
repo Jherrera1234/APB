@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import { Switch, Route, useHistory } from 'react-router';
 import Layout from './layouts/Layout';
 import Login from './screens/Login/Login';
+import Register from './screens/Register/Register';
 import {
   loginUser,
   registerUser,
@@ -20,6 +21,12 @@ function App() {
     history.push('/');
   };
 
+  const handleRegister = async (registerData) => {
+    const userData = await registerUser(registerData);
+    setCurrentUser(userData);
+    history.push('/');
+  };
+
 
   return (
     <div className="App">
@@ -27,6 +34,9 @@ function App() {
         <Switch>
           <Route path='/login'>
             <Login handleLogin={handleLogin} />
+          </Route>
+          <Route path='/register'>
+            <Register handleRegister={handleRegister} />
           </Route>
         </Switch>
 
