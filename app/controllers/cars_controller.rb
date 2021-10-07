@@ -10,7 +10,7 @@ class CarsController < ApplicationController
 
   # GET /cars/1
   def show
-    render json: @car, includes: :categories
+    render json: @car, includes: {:parts => { include: :categories}}
   end
 
   # POST /cars
@@ -38,6 +38,14 @@ class CarsController < ApplicationController
     @car.destroy
   end
 
+  def show_car_categories
+  @car = Car.find(params[:id])
+  @categories=Category.all
+  # @car << @categories
+  render json: @car, includes: {:parts => { include: :categories}}
+
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_car
@@ -46,6 +54,6 @@ class CarsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def car_params
-      params.require(:car).permit(:make, :model, :img_url, :year)
+      params.require(:car).permit(:make, :model, :img_url, :year, :categories)
     end
 end

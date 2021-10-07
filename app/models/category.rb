@@ -1,4 +1,4 @@
 class Category < ApplicationRecord
   has_many :parts
-  has_and_belongs_to_many :cars
+  has_many :cars, through: :parts
 end

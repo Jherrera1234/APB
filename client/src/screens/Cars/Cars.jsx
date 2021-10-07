@@ -8,6 +8,8 @@ export default function Cars(props) {
         <div key={car.id}>
           <Link to={`/cars/${car.id}`}>
             <p>{car.make}</p>
+            <p>{car.model}</p>
+            <img src={car.img_url} />
           </Link>
           <Link to={`/cars/${car.id}/edit`}>
             <button>Edit</button>

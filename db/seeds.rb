@@ -8,8 +8,8 @@
 
 
 Part.destroy_all
-Category.destroy_all
 Car.destroy_all
+Category.destroy_all
 User.destroy_all
 
 
@@ -17,17 +17,18 @@ User.destroy_all
 
 puts "#{User.count} user(s) created" 
 
-@car1 = Car.create!(make: "Mitsubishi", model: "Evo-Lancer", img_url:"https://images.unsplash.com/photo-1627008450028-f88d6174ca67?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bWl0c3ViaXNoaSUyMGV2b3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60", year: "2008", user: @admin)
-@car2 = Car.create!(make: "Toyota", model: "Supra Mk5", img_url:"https://images.unsplash.com/photo-1596639410348-8470f7fa9f84?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fHN1cHJhfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60", year: "2020", user: @admin)
-
-puts "#{Car.count} cars created" 
 
 @engine = Category.create!(name: "Engine")
 @turbo = Category.create!(name: "Turbo")
 @suspension = Category.create!(name: "Suspension")
 @tires = Category.create!(name: "Tires")
-
+@categories=Category.all
 puts "#{Category.count} categories created" 
+
+@car1 = Car.create!(make: "Mitsubishi", model: "Evo-Lancer", img_url:"https://images.unsplash.com/photo-1627008450028-f88d6174ca67?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bWl0c3ViaXNoaSUyMGV2b3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60", year: "2008", user: @admin, categories: @categories)
+@car2 = Car.create!(make: "Toyota", model: "Supra Mk5", img_url:"https://images.unsplash.com/photo-1596639410348-8470f7fa9f84?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fHN1cHJhfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60", year: "2020", user: @admin, categories: @categories)
+
+puts "#{Car.count} cars created" 
 
 Part.create!(name: "Paccar MX13 Turbocharger", price: 400, description: "A very good turbo, gave me that extra horse power", img_url: "https://media.istockphoto.com/photos/turbocharger-on-white-picture-id157404179?b=1&k=20&m=157404179&s=170667a&w=0&h=bKFsdYDUMjIxGgbM5rCkiu8COHYGkCBXGYvuBdIIvYE=", rating:4, car:@car2, category:@turbo)
 Part.create!(name: "Summit Racing SUM-260050", price: 500, description: "An amazing turbo, blew my comptetion out the water", img_url: "https://media.istockphoto.com/photos/huge-turbocharger-picture-id172343326?b=1&k=20&m=172343326&s=170667a&w=0&h=j4p448kK4nQ5H-PEhSKUE4GEyBxZ9nvav-B1BRTnJ1w=", rating:5, car:@car1, category:@turbo)
