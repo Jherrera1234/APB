@@ -10,7 +10,7 @@ class CarsController < ApplicationController
 
   # GET /cars/1
   def show
-    render json: @car, includes: {:parts => { include: :categories}}
+    render json: @car, include: {parts:  { include: :category}}
   end
 
   # POST /cars
