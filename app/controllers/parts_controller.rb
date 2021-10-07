@@ -39,6 +39,21 @@ class PartsController < ApplicationController
     @part.destroy
   end
 
+  def add_part_car_categories
+    @car = Car.find(params[:car_id])
+    @category=Category.find(params[:id])
+    @part = Part.new(part_params)
+    @part.category = @category
+    @part.car = @car
+  
+    if @part.save
+      render json: @part, status: :created
+    else
+      render json: @part.errors, status: :unprocessable_entity
+    end
+  end
+
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_part

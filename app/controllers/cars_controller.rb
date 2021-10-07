@@ -10,7 +10,7 @@ class CarsController < ApplicationController
 
   # GET /cars/1
   def show
-    render json: @car, include: {parts:  { include: :category}}
+    render json: @car, include: :categories
   end
 
   # POST /cars
@@ -40,7 +40,7 @@ class CarsController < ApplicationController
 
   def show_car_categories
   @car = Car.find(params[:id])
-  @categories=Category.all
+  @categories=Category.find(params[:category_id])
   # @car << @categories
   render json: @car, includes: {:parts => { include: :categories}}
 
