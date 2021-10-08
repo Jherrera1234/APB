@@ -20,13 +20,18 @@ export const deletePart = async (id) => {
   return resp;
 };
 
+export const putPart = async (id, partsData) => {
+  const resp = await api.put(`/parts/${id}`, { part: partsData });
+  return resp.data;
+};
+
 export const addPart = async (car_id, id) => {
-  const resp = await api.put(`parts/cars/${car_id}/categories/${id}`);
+  const resp = await api.post(`/parts/cars/${car_id}/categories/${id}`);
   return resp.data;
 };
 
 export const getCarParts = async (car_id, category_id) => {
-  const resp = await api.get(`cars/${car_id}/categories/${category_id}`);
+  const resp = await api.get(`/cars/${car_id}/categories/${category_id}`);
   return resp.data;
 };
 

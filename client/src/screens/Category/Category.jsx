@@ -6,10 +6,22 @@ import { getCarParts } from '../../services/parts';
 
 export default function Category() {
   const [categories, setCategories] = useState(null);
-  const { id } = useParams();
+  const [parts, setParts] = useState([])
+  const { car_id, category_id } = useParams();
 
+  useEffect(() => {
+    const fetchParts = async () => {
+      const partsData = await getCarParts(car_id, category_id)
+      setParts(partsData)
+    }
+    fetchParts();
 
+  }, [car_id, category_id])
 
+  //   price: null,
+  // description: null,
+  // img_url: null,
+  // rating: null,
 
 
 
@@ -17,7 +29,25 @@ export default function Category() {
 
   return (
     <div>
-      <h1>test</h1>
+      {parts?.map((part) => {
+        if (part.name !== null) {
+          return (
+            <div>
+              <img src={part.img_url} />
+              <p>{part.name}</p>
+              <p>{part.price}</p>
+              <p>{part.description}</p>
+              <p>{part.rating}</p>
+              <Link to={`/parts/${part.id}/edit`}>
+                <button>Edit</button>
+              </Link>
+            </div>
+          )
+        }
+
+      })}
+
+
     </div>
   )
 }
