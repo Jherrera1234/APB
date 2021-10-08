@@ -17,7 +17,10 @@ class CarsController < ApplicationController
   def create
     @car = Car.new(car_params)
     @car.user = @current_user
+    @categories = Category.all
+   
     if @car.save
+      
       render json: @car, status: :created
     else
       render json: @car.errors, status: :unprocessable_entity
