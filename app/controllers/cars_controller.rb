@@ -38,12 +38,22 @@ class CarsController < ApplicationController
     @car.destroy
   end
 
-  def show_car_categories
-  @car = Car.find(params[:id])
-  @categories=Category.find(params[:category_id])
-  # @car << @categories
-  render json: @car, includes: {:parts => { include: :categories}}
+  # def show_car_categories
+  # @car = Car.find(params[:id])
+  # @categories=Category.find(params[:category_id])
+  # # @car << @categories
+  # render json: @car, includes: {:parts => { include: :categories}}
 
+  # end
+
+  def car_categories
+    @car = Car.find(params[:car_id])
+    @category=Category.find(params[:id])
+    # @category.cars = @car
+    @car.categories = @category
+    
+    render json: @car, include: :categories
+    
   end
 
   private

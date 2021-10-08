@@ -5,6 +5,8 @@ import Cars from '../../screens/Cars/Cars';
 import Car from '../../screens/Car/Car';
 // import CarCreate from '../../screens/CarCreate';
 import CarEdit from '../../screens/CarEdit/CarEdit';
+import Category from '../../screens/Category/Category';
+
 // import CarDetail from '../../screens/CarDetail';
 export default function MainContainer() {
   const [cars, setCars] = useState([]);
@@ -22,13 +24,8 @@ export default function MainContainer() {
     fetchCars();
   }, []);
 
-  useEffect(() => {
-    const fetchCar = async () => {
-      const car = await getOneCar();
-      setCar(car);
-    };
-    fetchCar();
-  }, []);
+
+
 
   const handleCarUpdate = async (id, carData) => {
     const updatedCar = await putCar(id, carData);
@@ -42,11 +39,14 @@ export default function MainContainer() {
 
   return (
     <Switch>
+      <Route path='categories/:id'>
+        <Category />
+      </Route>
       <Route path='/cars/:id/edit'>
         <CarEdit cars={cars} handleCarUpdate={handleCarUpdate} />
       </Route>
       <Route path='/cars/:id'>
-        <Car cars={car} handleCarUpdate={handleCarUpdate} />
+        <Car />
       </Route>
       <Route path='/'>
         <Cars cars={cars} />

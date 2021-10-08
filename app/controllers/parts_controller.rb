@@ -53,6 +53,17 @@ class PartsController < ApplicationController
     end
   end
 
+  def car_categories
+    # @car = Car.find(params[:car_id])
+    # @category=Category.find(params[:id])
+    @part = Part.find {|i| i.car_id == params[:car_id] and i.category_id == params[:id]}
+    # @category.cars = @car
+    
+    
+    render json: @part
+    
+  end
+
 
   private
     # Use callbacks to share common setup or constraints between actions.
