@@ -63,7 +63,7 @@ class PartsController < ApplicationController
      @category = Category.find(params[:category_id])
      @part = Part.where( category_id:  @category.id ,car_id:  @car.id  )
     
-    render json:  @part
+    render json:  @part, include: :category
     
   end
 
