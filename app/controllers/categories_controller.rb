@@ -12,10 +12,12 @@ class CategoriesController < ApplicationController
     render json: @category, include: :parts
   end
   def car_categories
-    @car = Car.find(params[:car_id])
+    # @car = Car.find(params[:car_id])
     @part = Part.where(car_id: @car.id)
     @category=Category.find(params[:id])
     # @category.cars = @car
+    @car = Car.find(params[:car_id])
+     @car.categories
     @category.cars = @car
     
     render json: @category

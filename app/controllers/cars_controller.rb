@@ -46,15 +46,15 @@ class CarsController < ApplicationController
 
   # end
 
-  def car_categories
-    @car = Car.find(params[:car_id])
-    @category=Category.find(params[:id])
-    # @category.cars = @car
-    @car.categories = @category
+  # def car_categories
+  #   @car = Car.find(params[:car_id])
+  #   @category=Category.find(params[:id])
+  #   # @category.cars = @car
+  #   @car.categories = @category
     
-    render json: @car, include: :categories
+  #   render json: @car, include: :categories
     
-  end
+  # end
 
   private
     # Use callbacks to share common setup or constraints between actions.
