@@ -19,11 +19,13 @@ export default function Car(props) {
     <div>
 
       <h1>{car?.make}</h1>
+
       {car?.categories.slice(0, 4).map((category) => {
         return (
-          <Link to={`/categories/${category.id}`}>
+
+          <Link to={`/cars/${car?.id}/categories/${category.id}`}>
             <p>{category.name}</p>
-            {/* <Category categoryName={category.name} /> */}
+
           </Link>
         )
       })

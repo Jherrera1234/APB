@@ -39,7 +39,7 @@ export default function MainContainer() {
 
   return (
     <Switch>
-      <Route path='categories/:id'>
+      <Route path='/cars/:car_id/categories/:category_id'>
         <Category />
       </Route>
       <Route path='/cars/:id/edit'>

@@ -20,7 +20,14 @@ export const deletePart = async (id) => {
   return resp;
 };
 
-export const putPart = async (id, partData) => {
-  const resp = await api.put(`/parts/${id}`, { part: partData });
+export const addPart = async (car_id, id) => {
+  const resp = await api.put(`parts/cars/${car_id}/categories/${id}`);
   return resp.data;
 };
+
+export const getCarParts = async (car_id, category_id) => {
+  const resp = await api.get(`cars/${car_id}/categories/${category_id}`);
+  return resp.data;
+};
+
+

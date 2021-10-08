@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   resources :categories 
   resources :parts
  
-  get 'cars/:car_id/categories/:category_id', to: 'parts#car_categories'
-  put 'parts/cars/:car_id/categories/:id', to: 'parts#add_part_car_categories'
+  get '/cars/:car_id/categories/:category_id', to: 'parts#car_categories'
+  put '/parts/cars/:car_id/categories/:id', to: 'parts#add_part_car_categories'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
