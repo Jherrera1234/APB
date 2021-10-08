@@ -1,7 +1,7 @@
+import React from 'react'
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-
-export default function PartEdit(props) {
+export default function PartCreate(props) {
   const [formData, setFormData] = useState({
     name: '',
     img_url: '',
@@ -9,23 +9,7 @@ export default function PartEdit(props) {
     description: '',
     rating: ''
   });
-  const { id } = useParams();
-
-  useEffect(() => {
-    const prefillFormData = () => {
-      const singlePart = props.parts.find(part => part.id === Number(id))
-      setFormData({
-        name: singlePart.name,
-        img_url: singlePart.img_url,
-        price: singlePart.price,
-        description: singlePart.description,
-        rating: singlePart.rating
-      });
-    }
-    if (props.parts.length) {
-      prefillFormData();
-    }
-  }, [props.parts, id]);
+  const { car_id, category_id } = useParams();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -34,15 +18,14 @@ export default function PartEdit(props) {
       [name]: value,
     }));
   };
-
   return (
     <form
       onSubmit={(e) => {
         e.preventDefault();
-        props.handlePartUpdate(id, formData);
+        props.handlePartCreate(car_id, category_id, formData);
       }}
     >
-      <h3>Edit Part</h3>
+      <h3>Add Part</h3>
       <label>
         Name:
         <input

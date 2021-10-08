@@ -19,8 +19,9 @@ export default function Cars(props) {
           </button> */}
         </div>
       ))}
+      <br />
       <Link to='/cars/new'>
-        <button>create</button>
+        <button>Create</button>
       </Link>
     </div>
   );

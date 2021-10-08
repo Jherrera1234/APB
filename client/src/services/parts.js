@@ -10,10 +10,10 @@ export const getOnePart = async (id) => {
   return resp.data;
 };
 
-export const postPart = async (partData) => {
-  const resp = await api.post('/parts', { part: partData });
-  return resp.data;
-};
+// export const postPart = async (partData) => {
+//   const resp = await api.post('/parts', { part: partData });
+//   return resp.data;
+// };
 
 export const deletePart = async (id) => {
   const resp = await api.delete(`/parts/${id}`);
@@ -25,8 +25,8 @@ export const putPart = async (id, partsData) => {
   return resp.data;
 };
 
-export const addPart = async (car_id, id) => {
-  const resp = await api.post(`/parts/cars/${car_id}/categories/${id}`);
+export const postPart = async (car_id, id, partData) => {
+  const resp = await api.post(`/parts/cars/${car_id}/categories/${id}`, { part: partData });
   return resp.data;
 };
 

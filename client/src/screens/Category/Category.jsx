@@ -46,7 +46,10 @@ export default function Category() {
         }
 
       })}
-
+      <br />
+      <Link to={`/parts/cars/${car_id}/categories/${category_id}`}>
+        <button>Create</button>
+      </Link>
 
     </div>
   )

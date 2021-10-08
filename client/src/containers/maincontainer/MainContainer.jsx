@@ -1,13 +1,14 @@
 import { useState, useEffect } from 'react';
 import { Switch, Route, useHistory } from 'react-router-dom';
-import { getAllCars, getOneCar, postCar, deleteCar, putCar } from '../../services/cars';
-import { getAllParts, putPart } from '../../services/parts';
+import { getAllCars, postCar, deleteCar, putCar } from '../../services/cars';
+import { getAllParts, putPart, postPart } from '../../services/parts';
 import Cars from '../../screens/Cars/Cars';
 import Car from '../../screens/Car/Car';
-// import CarCreate from '../../screens/CarCreate';
 import CarEdit from '../../screens/CarEdit/CarEdit';
 import Category from '../../screens/Category/Category';
 import PartEdit from '../../screens/PartEdit/PartEdit';
+import CarCreate from '../../screens/CarCreate/CarCreate';
+import PartCreate from '../../screens/PartCreate/PartCreate';
 // import CarDetail from '../../screens/CarDetail';
 export default function MainContainer() {
   const [cars, setCars] = useState([]);
@@ -45,6 +46,18 @@ export default function MainContainer() {
     history.push('/');
   };
 
+  const handleCarCreate = async (carData) => {
+    const newCar = await postCar(carData);
+    setCars((prevState) => [...prevState, newCar]);
+    history.push('/');
+  };
+
+  const handlePartCreate = async (car_id, id, partData) => {
+    const newPart = await postPart(car_id, id, partData);
+    setParts((prevState) => [...prevState, newPart]);
+    history.push('/');
+  };
+
   const handlePartUpdate = async (id, partData) => {
     const updatedPart = await putPart(id, partData);
     setParts((prevState) =>
@@ -57,6 +70,12 @@ export default function MainContainer() {
 
   return (
     <Switch>
+      <Route path='/parts/cars/:car_id/categories/:category_id'>
+        <PartCreate handlePartCreate={handlePartCreate} />
+      </Route>
+      <Route path='/cars/new'>
+        <CarCreate handleCarCreate={handleCarCreate} />
+      </Route>
       <Route path='/parts/:id/edit'>
         <PartEdit parts={parts} handlePartUpdate={handlePartUpdate} />
       </Route>
