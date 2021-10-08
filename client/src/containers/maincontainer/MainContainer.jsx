@@ -37,11 +37,13 @@ export default function MainContainer() {
   const handlePartDelete = async (id) => {
     await deletePart(id);
     setParts((prevState) => prevState.filter((partItem) => partItem.id !== id));
+    history.push('/');
   };
 
   const handleCarDelete = async (id) => {
     await deleteCar(id);
     setCars((prevState) => prevState.filter((carItem) => carItem.id !== id));
+    history.push('/');
   };
 
   const handleCarUpdate = async (id, carData) => {
