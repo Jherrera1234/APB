@@ -4,7 +4,7 @@ import { useParams, Link, Route, Switch } from 'react-router-dom';
 import { getOneCategory } from '../../services/categories';
 import { getCarParts } from '../../services/parts';
 
-export default function Category() {
+export default function Category(props) {
   const [categories, setCategories] = useState(null);
   const [parts, setParts] = useState([])
   const { car_id, category_id } = useParams();
@@ -41,6 +41,9 @@ export default function Category() {
               <Link to={`/parts/${part.id}/edit`}>
                 <button>Edit</button>
               </Link>
+              <button onClick={() => props.handlePartDelete(part.id)}>
+                Delete
+              </button>
             </div>
           )
         }

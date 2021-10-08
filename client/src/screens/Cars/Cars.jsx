@@ -14,9 +14,9 @@ export default function Cars(props) {
           <Link to={`/cars/${car.id}/edit`}>
             <button>Edit</button>
           </Link>
-          {/* <button onClick={() => props.handleCarDelete(car.id)}>
+          <button onClick={() => props.handleCarDelete(car.id)}>
             Delete
-          </button> */}
+          </button>
         </div>
       ))}
       <br />

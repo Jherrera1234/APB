@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Switch, Route, useHistory } from 'react-router-dom';
 import { getAllCars, postCar, deleteCar, putCar } from '../../services/cars';
-import { getAllParts, putPart, postPart } from '../../services/parts';
+import { getAllParts, putPart, postPart, deletePart } from '../../services/parts';
 import Cars from '../../screens/Cars/Cars';
 import Car from '../../screens/Car/Car';
 import CarEdit from '../../screens/CarEdit/CarEdit';
@@ -34,7 +34,15 @@ export default function MainContainer() {
     fetchParts();
   }, []);
 
+  const handlePartDelete = async (id) => {
+    await deletePart(id);
+    setParts((prevState) => prevState.filter((partItem) => partItem.id !== id));
+  };
 
+  const handleCarDelete = async (id) => {
+    await deleteCar(id);
+    setCars((prevState) => prevState.filter((carItem) => carItem.id !== id));
+  };
 
   const handleCarUpdate = async (id, carData) => {
     const updatedCar = await putCar(id, carData);
@@ -80,7 +88,7 @@ export default function MainContainer() {
         <PartEdit parts={parts} handlePartUpdate={handlePartUpdate} />
       </Route>
       <Route path='/cars/:car_id/categories/:category_id'>
-        <Category />
+        <Category handlePartDelete={handlePartDelete} />
       </Route>
       <Route path='/cars/:id/edit'>
         <CarEdit cars={cars} handleCarUpdate={handleCarUpdate} />
@@ -89,7 +97,7 @@ export default function MainContainer() {
         <Car />
       </Route>
       <Route path='/'>
-        <Cars cars={cars} />
+        <Cars cars={cars} handleCarDelete={handleCarDelete} />
       </Route>
     </Switch>
   )
