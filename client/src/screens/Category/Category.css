@@ -1,3 +1,43 @@
-#part{
-  border: none;
+
+
+#part-image{
+  height: 25vh;
+    object-fit: contain;
 }
+ .part-edit-button,.part-delete-button,.part-create-button{
+  background-color: black;
+  color: white;
+  border: none;
+
+ }
+
+ .part-edit-button,.part-delete-button{
+  margin: 15px;
+  width: 7vw;
+ }
+
+ .part-create-button{
+   margin: 40px;
+   width: 52vw;
+    height: 6vh;
+    font-size: xx-large;
+ }
+ .Engine-name{
+  background-image: url("https://images.unsplash.com/photo-1550897991-cc952b309ac0?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTl8fGVuZ2luZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60");
+  }
+  
+  .Turbo-name{
+    background-image: url("https://images.unsplash.com/photo-1609773500493-ba6c7a08ef78?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8dHVyYm98ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60");
+  }
+  
+  .Suspension-name{
+    background-image: url("https://images.unsplash.com/photo-1610876126529-fb3aa7e9abc1?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8c3VzcGVuc2lvbnxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60");
+  }
+  .Tires-name{
+    background-image: url("https://images.unsplash.com/photo-1618846042125-0a64df35d3d6?ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8dGlyZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60");
+  }
+  
+  .Engine-name,.Suspension-name,.Tires-name,.Turbo-name{
+    height: 15vh;
+    margin: 25px 125px;
+  }

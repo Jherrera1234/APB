@@ -35,6 +35,8 @@ export default function Car(props) {
           <Link className='category-link' to={`/cars/${car?.id}/categories/${category.id}`}>
             <h2 className={`${category.name}-id`} >{category.name}</h2>
 
+
+
           </Link>
         )
       })
