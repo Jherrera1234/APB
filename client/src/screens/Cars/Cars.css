@@ -1,0 +1,53 @@
+#car-card{
+  height: 50vh;
+}
+#car-card-img{
+  height: 410px;
+    object-fit: cover;
+}
+
+#car-card-img-over{
+  display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.cars{
+  margin: 20px 0px;
+}
+
+#car-page{
+height: 26vh;
+}
+
+#car-card-page{
+  height: 212px;
+    object-fit: cover;
+}
+
+.garage-title{
+  display: flex;
+    justify-content: space-evenly;
+    margin: 35px 0px;
+}
+
+.add-car-link{
+  text-decoration: none;
+  color: black;
+}
+
+#car-make,#car-model{
+  font-weight: bolder;
+  font-size: xx-large;
+  color: gray;
+}
+
+.car-edit-button, .car-delete-button{
+  margin: 15px;
+    background-color: black;
+    color: white;
+    border: none;
+    width: 7vw;
+}
+
+

@@ -20,7 +20,7 @@ class CarsController < ApplicationController
     @categories = Category.all
    
     if @car.save
-      
+      # @car.categories << @categories
       render json: @car, status: :created
     else
       render json: @car.errors, status: :unprocessable_entity
