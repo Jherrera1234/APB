@@ -18,8 +18,8 @@
 
  .part-create-button{
    margin: 40px;
-   width: 52vw;
-    height: 6vh;
+   width: 32vw;
+   height: 45px;
     font-size: xx-large;
  }
  .Engine-name{
@@ -34,10 +34,31 @@
     background-image: url("https://images.unsplash.com/photo-1610876126529-fb3aa7e9abc1?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8c3VzcGVuc2lvbnxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60");
   }
   .Tires-name{
-    background-image: url("https://images.unsplash.com/photo-1618846042125-0a64df35d3d6?ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8dGlyZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60");
+    background-image: url("https://images.unsplash.com/photo-1573939843624-b22996c1a31c?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTl8fHRpcmVzfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60");
   }
   
   .Engine-name,.Suspension-name,.Tires-name,.Turbo-name{
-    height: 15vh;
-    margin: 25px 125px;
+    height: 25vh;
+    margin: 20px 0px 0px 0px;
+   
+  }
+
+  .category-parts{
+    display: flex;
+  }
+
+  .middle-section{
+    display: flex;
+    flex-direction: column;
+    width: 38%;
+  }
+
+  .right-image,.left-image{
+    object-fit: cover;
+  }
+  .right-image{
+    width: 32%;
+  }
+  .left-image{
+    width:30vw;
   }

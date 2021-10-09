@@ -41,35 +41,38 @@ export default function Category(props) {
   return (
     <div className='part-page'>
       <h1 className={`${categories?.name}-name`} >{categories?.name}</h1>
+      <div className='category-parts'>
+        <img className='left-image' src="https://images.unsplash.com/photo-1565064012199-c537fe6fb4b5?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NzN8fGNhcnN8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60" />
+        <div className='middle-section'>
+          {parts?.map((part) => {
+            if (part.name !== null) {
+              return (
+                <div className='part-container'>
 
-      {parts?.map((part) => {
-        if (part.name !== null) {
-          return (
-            <div className='part-container'>
-
-              <img id='part-image' src={part.img_url} />
-              <h3>Name: {part.name}</h3>
-              <h3>Price: {`$ ${part.price}`}</h3>
-              <h3>Description: {part.description}</h3>
-              <h3>Rating: {`${part.rating}/5`}</h3>
-
-
-              <Link to={`/parts/${part.id}/edit`}>
-                <button className='part-edit-button'>Edit</button>
-              </Link>
-              <button className='part-delete-button' onClick={() => props.handlePartDelete(part.id)}>
-                Delete
-              </button>
-            </div>
-          )
-        }
-
-      })}
-      <Link to={`/parts/cars/${car_id}/categories/${category_id}`}>
-        <button className='part-create-button'>Add New Part</button>
-      </Link>
+                  <img id='part-image' src={part.img_url} />
+                  <h3>Name: {part.name}</h3>
+                  <h3>Price: {`$ ${part.price}`}</h3>
+                  <h3>Description: {part.description}</h3>
+                  <h3>Rating: {`${part.rating}/5`}</h3>
 
 
+                  <Link to={`/parts/${part.id}/edit`}>
+                    <button className='part-edit-button'>Edit</button>
+                  </Link>
+                  <button className='part-delete-button' onClick={() => props.handlePartDelete(part.id)}>
+                    Delete
+                  </button>
+                </div>
+              )
+            }
+
+          })}
+          <Link to={`/parts/cars/${car_id}/categories/${category_id}`}>
+            <button className='part-create-button'>Add New Part</button>
+          </Link>
+        </div>
+        <img className='right-image' src="https://images.unsplash.com/photo-1618205062886-3976f4bb8219?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NjR8fHN1cHJhJTIwbWs1fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60" />
+      </div>
     </div>
   )
 }
