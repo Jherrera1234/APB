@@ -1,0 +1,46 @@
+#car-id-page{
+  height: 26vh;
+  margin-bottom: 25px;
+}
+#car-id-card-page{
+  height: 212px;
+  object-fit: cover;
+}
+
+#car-id-card-img-page{
+  display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.car-id-title{
+  color: #d7466d;
+    font-size: xxx-large;
+    font-weight: bolder;
+}
+
+.Engine-id{
+background-image: url("https://images.unsplash.com/photo-1550897991-cc952b309ac0?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTl8fGVuZ2luZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60");
+}
+
+.Turbo-id{
+  background-image: url("https://images.unsplash.com/photo-1609773500493-ba6c7a08ef78?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8dHVyYm98ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60");
+}
+
+.Suspension-id{
+  background-image: url("https://images.unsplash.com/photo-1610876126529-fb3aa7e9abc1?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8c3VzcGVuc2lvbnxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60");
+}
+.Tires-id{
+  background-image: url("https://images.unsplash.com/photo-1618846042125-0a64df35d3d6?ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8dGlyZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60");
+}
+
+.Engine-id,.Suspension-id,.Tires-id,.Turbo-id{
+  height: 15vh;
+  margin: 25px 125px;
+}
+
+.category-link{
+  text-decoration: none;
+  color: white;
+}

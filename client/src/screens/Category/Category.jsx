@@ -3,7 +3,8 @@ import { useState, useEffect } from 'react';
 import { useParams, Link, Route, Switch } from 'react-router-dom';
 import { getOneCategory } from '../../services/categories';
 import { getCarParts } from '../../services/parts';
-
+import { Card } from 'react-bootstrap';
+import './Category.css'
 export default function Category(props) {
   const [categories, setCategories] = useState(null);
   const [parts, setParts] = useState([])
@@ -33,11 +34,20 @@ export default function Category(props) {
         if (part.name !== null) {
           return (
             <div>
-              <img src={part.img_url} />
-              <p>{part.name}</p>
-              <p>{part.price}</p>
-              <p>{part.description}</p>
-              <p>{part.rating}</p>
+
+              <Card id='part'>
+                <Card.Img variant="top" src={part.img_url} />
+                <Card.Body>
+                  <Card.Text>
+                    <p>{part.name}</p>
+                    <p>{part.price}</p>
+                    <p>{part.description}</p>
+                    <p>{part.rating}</p>
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+
+
               <Link to={`/parts/${part.id}/edit`}>
                 <button>Edit</button>
               </Link>
