@@ -7,7 +7,7 @@ export default function Layout(props) {
       <header className='nav-bar'>
         <div className='logo-div'>
           <img className='icon' src="https://cdn-icons-png.flaticon.com/128/685/685664.png" />
-          <h1>APB</h1>
+          <h1 className='apb-logo'>APB</h1>
         </div>
         {props.currentUser ? (
           <div className='login-div'>

@@ -44,7 +44,7 @@ export default function PartEdit(props) {
       }}
     >
       <div className='part-edit-container'>
-        <h3>Edit Part</h3>
+        <h3 className='edit-part-title'>Edit Part</h3>
         <label>
           Name:
           <input

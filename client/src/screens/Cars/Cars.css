@@ -1,51 +1,74 @@
 #car-card{
   height: 410px;
+  font-family: 'Federant', cursive;
+  font-weight: bolder;
 }
 #car-card-img{
   height: 410px;
     object-fit: cover;
+    font-family: 'Federant', cursive;
+  font-weight: bolder;
+}
+.car-title{
+  color: white;
 }
 
 #car-card-img-over{
   display: flex;
     flex-direction: column;
     justify-content: center;
+    font-family: 'Federant', cursive;
+  font-weight: bolder;
 }
 
 .cars{
   margin: 20px 0px;
+  font-family: 'Federant', cursive;
+  font-weight: bolder;
 }
 
 #car-page{
 height: 212px;
+font-family: 'Federant', cursive;
+  font-weight: bolder;
 }
 
 #car-card-page{
   height: 212px;
     object-fit: cover;
+    font-family: 'Federant', cursive;
+  font-weight: bolder;
 }
 
 .garage-title{
   display: flex;
     justify-content: space-evenly;
     margin: 35px 0px;
+    font-family: 'Federant', cursive;
+  font-weight: bolder;
 }
 
 .add-car-link{
   text-decoration: none;
   color: black;
+  font-family: 'Federant', cursive;
+  font-weight: bolder;
 }
 
 #car-make,#car-model{
   font-weight: bolder;
-  font-size: xx-large;
-  color: gray;
+  font-size: 85px;
+  color: #73fb8a;
+  font-family: 'Federant', cursive;
+  font-weight: bolder;
 }
 
-.car-edit-button, .car-delete-button{
+.car-page-edit-button, .car-delete-button{
 margin: 15px;
     background-color: black;
     color: white;
     border: none;
     width: 7vw;
+    font-family: 'Federant', cursive;
+  font-weight: bolder;
 }

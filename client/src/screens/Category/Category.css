@@ -3,17 +3,26 @@
 #part-image{
   height: 25vh;
     object-fit: contain;
+  
+    font-family: 'Federant', cursive;
+    font-weight: bolder;
 }
  .part-edit-button,.part-delete-button,.part-create-button{
   background-color: black;
   color: white;
   border: none;
+  
+  font-family: 'Federant', cursive;
+  font-weight: bolder;
 
  }
 
  .part-edit-button,.part-delete-button{
   margin: 15px;
   width: 7vw;
+ 
+  font-family: 'Federant', cursive;
+  font-weight: bolder;
  }
 
  .part-create-button{
@@ -24,7 +33,8 @@
  }
  .Engine-name{
   background-image: url("https://images.unsplash.com/photo-1550897991-cc952b309ac0?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTl8fGVuZ2luZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60");
-  }
+  
+}
   
   .Turbo-name{
     background-image: url("https://images.unsplash.com/photo-1609773500493-ba6c7a08ef78?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8dHVyYm98ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60");
@@ -39,22 +49,31 @@
   
   .Engine-name,.Suspension-name,.Tires-name,.Turbo-name{
     height: 25vh;
-    margin: 20px 0px 0px 0px;
-   
+    margin: 0px 0px 0px 0px;
+    font-family: 'Federant', cursive;
+    font-weight: bolder;
   }
 
   .category-parts{
     display: flex;
+    font-family: 'Federant', cursive;
+    font-weight: bolder;
   }
 
   .middle-section{
     display: flex;
     flex-direction: column;
     width: 38%;
+   
+    font-family: 'Federant', cursive;
+    font-weight: bolder;
   }
 
   .right-image,.left-image{
     object-fit: cover;
+  
+    font-family: 'Federant', cursive;
+    font-weight: bolder;
   }
   .right-image{
     width: 32%;

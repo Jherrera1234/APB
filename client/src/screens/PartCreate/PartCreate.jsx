@@ -27,7 +27,7 @@ export default function PartCreate(props) {
       }}
     >
       <div className='part-create-container'>
-        <h3>Add Part</h3>
+        <h3 className='add-part-title'>Add Part</h3>
         <label>
           Name:
           <input

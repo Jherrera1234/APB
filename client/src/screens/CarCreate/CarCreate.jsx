@@ -24,7 +24,7 @@ export default function CarCreate(props) {
       props.handleCarCreate(formData);
     }}>
       <div className='car-create-container'>
-        <h3>Add to Your Garage!</h3>
+        <h3 className='add-car-garage'>Add to Your Garage!</h3>
         <label>
           Make:
           <input

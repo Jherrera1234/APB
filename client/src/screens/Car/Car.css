@@ -1,10 +1,16 @@
 #car-id-page{
   height: 212px;
   margin-bottom: 25px;
+  font-family: 'Federant', cursive;
+  font-weight: bolder;
+  color: #73fb8a;
 }
 #car-id-card-page{
   height: 212px;
   object-fit: cover;
+  font-family: 'Federant', cursive;
+  font-weight: bolder;
+  color: #73fb8a;
 }
 
 #car-id-card-img-page{
@@ -12,12 +18,17 @@
     justify-content: center;
     align-content: center;
     align-items: center;
+    font-family: 'Federant', cursive;
+  font-weight: bolder;
+  color: #73fb8a;
 }
 
 .car-id-title{
-  color: #d7466d;
+  color: #73fb8a;
     font-size: xxx-large;
     font-weight: bolder;
+    font-family: 'Federant', cursive;
+  font-weight: bolder;
 }
 
 .Engine-id{
@@ -42,5 +53,7 @@ background-image: url("https://images.unsplash.com/photo-1550897991-cc952b309ac0
 
 .category-link{
   text-decoration: none;
-  color: white;
+  color: #73fb8a;
+  font-family: 'Federant', cursive;
+  font-weight: bolder;
 }

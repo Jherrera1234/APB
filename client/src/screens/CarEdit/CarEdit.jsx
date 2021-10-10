@@ -42,7 +42,7 @@ export default function CarEdit(props) {
       }}
     >
       <div className='car-edit-container'>
-        <h3>Edit Car</h3>
+        <h3 className='edit-title'>Edit Car</h3>
         <label>
           Make:
           <input

@@ -34,7 +34,7 @@ export default function Cars(props) {
 
           </Link>
           <Link to={`/cars/${car.id}/edit`}>
-            <button className='car-edit-button'>Edit</button>
+            <button className='car-page-edit-button'>Edit</button>
           </Link>
           <button className='car-delete-button' onClick={() => props.handleCarDelete(car.id)}>
             Delete

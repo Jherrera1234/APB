@@ -8,18 +8,28 @@
   color: white;
   padding: 3em 5em;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+  font-family: 'Federant', cursive;
+  font-weight: bolder;
 }
-.car-form-container{
+.car-edit-form-container{
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 2em;
+  font-family: 'Federant', cursive;
+  font-weight: bolder;
 }
-
+.edit-title{
+  font-family: 'Federant', cursive;
+  font-weight: bolder;
+  font-size: 43px;
+}
 
 .car-edit-container label {
   
   font-size: 40px;
+  font-family: 'Federant', cursive;
+  font-weight: bolder;
 }
 
 .car-edit-form > input {
@@ -30,6 +40,8 @@
   
   font-size: 12px;
   margin: 3em 0;
+  font-family: 'Federant', cursive;
+  font-weight: bolder;
 }
 
 .car-edit-button {
@@ -39,6 +51,8 @@
   font-size: 14px;
   border: 1px solid black;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+  font-family: 'Federant', cursive;
+  font-weight: bolder;
 }
 
 

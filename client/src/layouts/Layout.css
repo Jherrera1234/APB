@@ -2,32 +2,42 @@
   display: flex;
   justify-content: space-evenly;
   background-color: #C00202;
+  font-family: 'Federant', cursive;
+  font-weight: bolder;
 }
 
 .logo-div{
 display: flex;
 margin-top: 35px;
-color: #07b304
+color: #07b304;
+font-family: 'Federant', cursive;
+font-weight: bolder;
 }
 
 .icon{
-  height:50%
-
+  height:50%;
+  
 }
 
 .login-div{
   display: flex;
     justify-content: space-between;
    color: #07b304;
+   font-family: 'Federant', cursive;
+   font-weight: bolder;
 
 }
 
 .username-div{
-  margin: 45px;
+  margin-top: 45px;
+  font-family: 'Federant', cursive;
+  font-weight: bolder;
 }
 
 .logout-div{
-  margin-top: 51px;
+  margin-top: 43px;
+  font-family: 'Federant', cursive;
+  font-weight: bolder;
 }
 
 .logout-button{
@@ -36,7 +46,8 @@ color: #07b304
     padding: 5px;
     border: none;
     margin: 6px;
-
+    font-family: 'Federant', cursive;
+    font-weight: bolder;
 }
 
 .home-link,.login-link{
@@ -44,6 +55,48 @@ color: #07b304
   color: white;
   background-color: black;
   padding: 0.5em;
+  font-family: 'Federant', cursive;
+  font-weight: bolder;
+}
 
+.home-link{
+  height: 41px;
+    margin-top: 43px;
+    font-weight: bolder;
+  
+}
+
+.apb-logo{
+  font-family: 'Federant', cursive;
+  font-weight: bolder;
+  margin-top: 10px;
+}
+
+@media (max-width: 575px){
+  .icon{
+    height: 31%;
+    margin-top: 10px;
+  }
+  
+}
+
+@media (max-width: 409px) {
+  .logout-button{
+    color: white;
+    background-color: black;
+    padding: 0px;
+    border: none;
+    margin: 6px;
+    font-family: 'Federant', cursive;
+    font-weight: bolder;
+  }
+
+  .home-link{
+    height: 41px;
+      margin-top: 43px;
+      font-weight: bolder;
+    padding: 4px;
+  }
+  
 }
 
