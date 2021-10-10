@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import './PartEdit.css'
 
 export default function PartEdit(props) {
   const [formData, setFormData] = useState({
@@ -36,64 +37,66 @@ export default function PartEdit(props) {
   };
 
   return (
-    <form
+    <form className='part-edit-form-container'
       onSubmit={(e) => {
         e.preventDefault();
         props.handlePartUpdate(id, formData);
       }}
     >
-      <h3>Edit Part</h3>
-      <label>
-        Name:
-        <input
-          type='text'
-          name='name'
-          value={formData.name}
-          onChange={handleChange}
-        />
-      </label>
+      <div className='part-edit-container'>
+        <h3>Edit Part</h3>
+        <label>
+          Name:
+          <input
+            type='text'
+            name='name'
+            value={formData.name}
+            onChange={handleChange}
+          />
+        </label>
+        <br />
+        <label>
+          Image-URL:
+          <input
+            type='text'
+            name='img_url'
+            value={formData.img_url}
+            onChange={handleChange}
+          />
+        </label>
+        <br />
+        <label>
+          Price:
+          <input
+            type='text'
+            name='price'
+            value={formData.price}
+            onChange={handleChange}
+          />
+        </label>
+        <br />
+        <label>
+          Description:
+          <input
+            type='text'
+            name='description'
+            value={formData.description}
+            onChange={handleChange}
+          />
+        </label>
+        <br />
+        <label>
+          Rating:
+          <input
+            type='number'
+            name='rating'
+            value={formData.rating}
+            onChange={handleChange}
+          />
+        </label>
+      </div>
       <br />
-      <label>
-        Image-URL:
-        <input
-          type='text'
-          name='img_url'
-          value={formData.img_url}
-          onChange={handleChange}
-        />
-      </label>
-      <br />
-      <label>
-        Price:
-        <input
-          type='text'
-          name='price'
-          value={formData.price}
-          onChange={handleChange}
-        />
-      </label>
-      <br />
-      <label>
-        Description:
-        <input
-          type='text'
-          name='description'
-          value={formData.description}
-          onChange={handleChange}
-        />
-      </label>
-      <br />
-      <label>
-        Rating:
-        <input
-          type='number'
-          name='rating'
-          value={formData.rating}
-          onChange={handleChange}
-        />
-      </label>
-      <br />
-      <button>Submit</button>
+      <button className='part-edit-page-button'>Submit</button>
     </form>
   );
 }

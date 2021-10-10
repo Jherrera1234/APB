@@ -1,5 +1,5 @@
 #car-card{
-  height: 50vh;
+  height: 410px;
 }
 #car-card-img{
   height: 410px;
@@ -17,7 +17,7 @@
 }
 
 #car-page{
-height: 26vh;
+height: 212px;
 }
 
 #car-card-page{
@@ -43,11 +43,9 @@ height: 26vh;
 }
 
 .car-edit-button, .car-delete-button{
-  margin: 15px;
+margin: 15px;
     background-color: black;
     color: white;
     border: none;
     width: 7vw;
 }
-
-

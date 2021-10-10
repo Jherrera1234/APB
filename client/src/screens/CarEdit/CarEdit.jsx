@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-
+import './CarEdit.css'
 export default function CarEdit(props) {
   const [formData, setFormData] = useState({
     make: '',
@@ -35,54 +35,56 @@ export default function CarEdit(props) {
   };
 
   return (
-    <form
+    <form className='car-edit-form-container'
       onSubmit={(e) => {
         e.preventDefault();
         props.handleCarUpdate(id, formData);
       }}
     >
-      <h3>Edit Car</h3>
-      <label>
-        Make:
-        <input
-          type='text'
-          name='make'
-          value={formData.make}
-          onChange={handleChange}
-        />
-      </label>
+      <div className='car-edit-container'>
+        <h3>Edit Car</h3>
+        <label>
+          Make:
+          <input
+            type='text'
+            name='make'
+            value={formData.make}
+            onChange={handleChange}
+          />
+        </label>
+        <br />
+        <label>
+          Model:
+          <input
+            type='text'
+            name='model'
+            value={formData.model}
+            onChange={handleChange}
+          />
+        </label>
+        <br />
+        <label>
+          Image-URL:
+          <input
+            type='text'
+            name='img_url'
+            value={formData.img_url}
+            onChange={handleChange}
+          />
+        </label>
+        <br />
+        <label>
+          Year:
+          <input
+            type='text'
+            name='year'
+            value={formData.year}
+            onChange={handleChange}
+          />
+        </label>
+      </div>
       <br />
-      <label>
-        Model:
-        <input
-          type='text'
-          name='model'
-          value={formData.model}
-          onChange={handleChange}
-        />
-      </label>
-      <br />
-      <label>
-        Image-URL:
-        <input
-          type='text'
-          name='img_url'
-          value={formData.img_url}
-          onChange={handleChange}
-        />
-      </label>
-      <br />
-      <label>
-        Year:
-        <input
-          type='text'
-          name='year'
-          value={formData.year}
-          onChange={handleChange}
-        />
-      </label>
-      <br />
-      <button>Submit</button>
+      <button className='car-edit-button'>Submit</button>
     </form>
   );
 }

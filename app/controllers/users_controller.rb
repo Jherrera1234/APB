@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  # before_action :set_user, only: [:show, :update, :destroy]
    # POST /users
    def create
     @user = User.new(user_params)

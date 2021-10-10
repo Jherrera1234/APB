@@ -1,0 +1,45 @@
+.car-edit-container {
+  display: flex;
+  flex-direction: column;
+  background-color:black;
+  width: 600px;
+  text-align: center;
+  border: 1px solid black;
+  color: white;
+  padding: 3em 5em;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+}
+.car-form-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2em;
+}
+
+
+.car-edit-container label {
+  
+  font-size: 40px;
+}
+
+.car-edit-form > input {
+  background: #ebebeb;
+  border: none;
+  box-shadow: inset -3px 5px 7px 0px rgb(0 0 0 / 20%);
+  padding: 10px;
+  
+  font-size: 12px;
+  margin: 3em 0;
+}
+
+.car-edit-button {
+  background-color: #050505;
+  color: white;
+  padding: 10px 26px;
+  font-size: 14px;
+  border: 1px solid black;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+
+
