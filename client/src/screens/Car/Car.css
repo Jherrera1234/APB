@@ -57,3 +57,41 @@ background-image: url("https://images.unsplash.com/photo-1550897991-cc952b309ac0
   font-family: 'Federant', cursive;
   font-weight: bolder;
 }
+
+
+@media (max-width: 768px) {
+  #car-id-page{
+   
+    color: #ff0606;
+  }
+  #car-id-card-page{
+  
+    color: #ff0606;
+  }
+  
+  #car-id-card-img-page{
+    
+    color: #ff0606;
+  }
+  
+  .car-id-title{
+    color: #ff0606;
+     
+  }
+
+  .category-link{
+    color: #ff0606;
+    
+  }
+  
+
+}
+
+@media (max-width: 623px){
+  .Engine-id,.Suspension-id,.Tires-id,.Turbo-id{
+    height: 15vh;
+    margin: 20px;
+  }
+  
+
+}

@@ -81,3 +81,28 @@
   .left-image{
     width:30vw;
   }
+
+  @media (max-width:768px){
+    .Engine-name,.Suspension-name,.Tires-name,.Turbo-name{
+      color: yellow;
+    }
+
+    .part-edit-button,.part-delete-button{
+      margin: 15px;
+      width: 73px;
+     
+      font-family: 'Federant', cursive;
+      font-weight: bolder;
+     }
+  }
+
+  @media (max-width:727px) {
+    .left-image,.right-image{
+      width: 20vw;
+    }
+
+    .middle-section{
+      width: 60vw;
+    }
+    
+  }

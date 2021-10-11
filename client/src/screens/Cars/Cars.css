@@ -72,3 +72,29 @@ margin: 15px;
     font-family: 'Federant', cursive;
   font-weight: bolder;
 }
+
+@media (max-width:789px ) {
+  #car-make,#car-model{
+    font-weight: bolder;
+    font-size: 35px;
+    color: #73fb8a;
+    font-family: 'Federant', cursive;
+    font-weight: bolder;
+  }
+
+  
+  
+  .car-page-edit-button, .car-delete-button{
+    margin: 15px;
+        background-color: rgb(255, 0, 0);
+        color: white;
+        border: none;
+        width: 47px;
+        font-family: 'Federant', cursive;
+      font-weight: bolder;
+    }
+
+    .car-delete-button{
+      width:60px;
+    }
+}
