@@ -54,7 +54,10 @@ class PartsController < ApplicationController
   end
 
   def car_categories
-  
+    # @car = Car.find(params[:car_id])
+    # @category=Category.find(params[:id])
+    # @part = Part.find {|i| i.car_id == params[:car_id] and i.category_id == params[:id]}
+    # @category.cars = @car
     @car = Car.find(params[:car_id])
     @car.categories 
      @category = Category.find(params[:category_id])
