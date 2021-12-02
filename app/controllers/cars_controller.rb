@@ -5,7 +5,14 @@ class CarsController < ApplicationController
   def index
     @cars = Car.all
 
+    
+
+    # @car = Car.where (user: @current_user.id)
+
+
     render json: @cars
+
+    
   end
 
   # GET /cars/1
@@ -58,6 +65,17 @@ class CarsController < ApplicationController
   #   render json: @car, include: :categories
     
   # end
+
+
+    def show_user_cars
+      @user = User.find(params[:user_id])
+
+      @car = Car.where(user_id: @user.id)
+
+      render json: @car
+
+
+    end
 
   private
     # Use callbacks to share common setup or constraints between actions.

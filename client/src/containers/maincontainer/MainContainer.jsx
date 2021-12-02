@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Switch, Route, useHistory } from 'react-router-dom';
-import { getAllCars, postCar, deleteCar, putCar } from '../../services/cars';
+import { getAllCars, postCar, deleteCar, putCar, getUserCars } from '../../services/cars';
 import { getAllParts, putPart, postPart, deletePart } from '../../services/parts';
 import Cars from '../../screens/Cars/Cars';
 import Car from '../../screens/Car/Car';
@@ -18,13 +18,20 @@ export default function MainContainer() {
   const history = useHistory();
 
 
-  useEffect(() => {
-    const fetchCars = async () => {
-      const carList = await getAllCars();
-      setCars(carList);
-    };
-    fetchCars();
-  }, []);
+
+  // useEffect(() => {
+  //   const fetchCars = async (props.userData_id) => {
+  //     const carList = await getUserCars(id);
+  //     setCars(carList);
+  //   };
+  //   fetchCars();
+  // }, []);
+
+  const handleFetchCars = async (id) => {
+    const carList = await getUserCars(id);
+    setCars(carList);
+  }
+
 
   useEffect(() => {
     const fetchParts = async () => {
@@ -77,7 +84,7 @@ export default function MainContainer() {
     );
     history.push('/');
   };
-
+  //cars={cars}
   return (
     <Switch>
       <Route path='/parts/cars/:car_id/categories/:category_id'>
@@ -98,8 +105,9 @@ export default function MainContainer() {
       <Route path='/cars/:id'>
         <Car />
       </Route>
-      <Route path='/'>
-        <Cars cars={cars} handleCarDelete={handleCarDelete} />
+      <Route path='/users/:user_id/cars'>
+
+        <Cars handleCarDelete={handleCarDelete} handleFetchCars={handleFetchCars} />
       </Route>
     </Switch>
   )

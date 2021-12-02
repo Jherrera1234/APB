@@ -1,7 +1,24 @@
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { Card } from 'react-bootstrap';
+import { useState, useEffect } from 'react';
+import { getUserCars } from '../../services/cars';
+
 import './Cars.css'
 export default function Cars(props) {
+  const [cars, setCars] = useState(null)
+  const { user_id } = useParams();
+
+  useEffect(() => {
+    const fetchCars = async () => {
+      const carList = await getUserCars(user_id);
+      setCars(carList);
+    };
+    console.log(cars)
+    fetchCars();
+
+  }, [user_id]);
+
+
   return (
     <div>
       <Card id='car-page' >
@@ -19,7 +36,7 @@ export default function Cars(props) {
           <h1 className='add-car'>Add Car</h1>
         </Link>
       </div>
-      {props.cars.map((car) => (
+      {cars?.map((car) => (
         <div className='cars' key={car.id}>
           <Link className='car-link' to={`/cars/${car.id}`}>
 

@@ -28,7 +28,8 @@ function App() {
   const handleLogin = async (loginData) => {
     const userData = await loginUser(loginData);
     setCurrentUser(userData);
-    history.push('/');
+
+    history.push(`/users/${userData.id}/cars`);
   };
 
   const handleRegister = async (registerData) => {
@@ -54,7 +55,7 @@ function App() {
           <Route path='/register'>
             <Register handleRegister={handleRegister} />
           </Route>
-          <Route path='/'>
+          <Route path='/users/:user_id/cars'>
             <MainContainer />
           </Route>
         </Switch>

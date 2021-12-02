@@ -25,7 +25,7 @@ export const putCar = async (id, carData) => {
   return resp.data;
 };
 
-// export const addFlavorToCar = async (flavorId, id) => {
-//   const resp = await api.put(`/flavors/${flavorId}/Cars/${id}`);
-//   return resp.data;
-// };
+export const getUserCars = async (id) => {
+  const resp = await api.get(`users/${id}/cars`)
+  return resp.data
+}
