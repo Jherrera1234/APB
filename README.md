@@ -68,8 +68,7 @@ _The **APB** MVP will be to give users a full CRUD experience and build a full s
 <img width="604" alt="Screen Shot 2021-10-04 at 8 49 01 AM" src="https://user-images.githubusercontent.com/56912648/135865399-0ab00ab1-2e68-4e22-9f82-810b44c7d659.png">
 
 - Garage
-
-!<img width="702" alt="Screen Shot 2021-10-04 at 8 49 18 AM" src="https://user-images.githubusercontent.com/56912648/135865496-45b360a8-12a9-49db-9c50-b51000d1a5db.png">
+<img width="722" alt="Screen Shot 2021-10-15 at 12 26 20 PM" src="https://user-images.githubusercontent.com/56912648/137529036-ebea8d81-d70b-4882-8d05-f390e50dcf23.png">
 
 
 - Add Car
